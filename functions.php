@@ -10,6 +10,7 @@ $mainMenu = '
                         <li class="nav-item"><a class="nav-link" href="/family.php">Family</a></li>
                         <li class="nav-item"><a class="nav-link" href="/friends.php">Friends</a></li>
                         <li class="nav-item"><a class="nav-link" href="/coworkers.php">Coworkers</a></li>
+<li class="nav-item"><a class="nav-link" href="/form.php">test</a></li>
                     </ul>
                 </div>
             </div>
