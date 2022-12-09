@@ -15,7 +15,7 @@
   <div class="row justify-content-center">
     <div class="card" style="width: 50%;">
       <div class="card-body">
-        <form method="post">
+        <form action ="/redirect.php" method="post">
           <label for="first-name">First Name:</label><br>
           <input type="text" id="first-name" name="first-name"><br>
           <label for="last-name">Last Name:</label><br>
@@ -32,23 +32,6 @@
           </select><br><br>
           <input type="submit" value="Submit">
         </form>
-        <?php
-        
-        if (isset($_POST["first-name"])) {
-          $firstName = $_POST["first-name"];
-          $lastName = $_POST["last-name"];
-          $email = $_POST["email"];
-          $phone = $_POST["phone"];
-          $relationship = $_POST["relationship"];
-        
-          echo "First Name: " . $firstName . "<br>";
-          echo "Last Name: " . $lastName . "<br>";
-          echo "Email: " . $email . "<br>";
-          echo "Phone: " . $phone . "<br>";
-          echo "Relationship: " . $relationship . "<br>";
-        }
-        
-        ?>
       </div>
     </div>
   </div>
