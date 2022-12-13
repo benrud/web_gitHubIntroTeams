@@ -34,12 +34,8 @@ if (isset($_POST["first-name"])) {
   array_push($existingData, $newFormData);
   //turn php array back into JSON data
   $jsonData = json_encode($existingData);
-
+  //send data to data.json
   file_put_contents($_SERVER['DOCUMENT_ROOT'].'/data.json', $jsonData);
-   
-  // header('Location: /contactMe.php');
 
-
-
-  header('Location: /form.php');
+  header('Location: /index.php');
 ?>
