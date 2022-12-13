@@ -7,11 +7,11 @@ if (isset($_POST["first-name"])) {
   $phone = $_POST["phone"];
   $relationship = $_POST["relationship"];
 
-  echo "First Name: " . $firstName . "<br>";
-  echo "Last Name: " . $lastName . "<br>";
-  echo "Email: " . $email . "<br>";
-  echo "Phone: " . $phone . "<br>";
-  echo "Relationship: " . $relationship . "<br>";
+  // echo "First Name: " . $firstName . "<br>";
+  // echo "Last Name: " . $lastName . "<br>";
+  // echo "Email: " . $email . "<br>";
+  // echo "Phone: " . $phone . "<br>";
+  // echo "Relationship: " . $relationship . "<br>";
 }
 
    // do if passed
@@ -41,5 +41,5 @@ if (isset($_POST["first-name"])) {
 
 
 
-  
+  header('Location: /form.php');
 ?>
