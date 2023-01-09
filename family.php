@@ -1,4 +1,10 @@
-<?php include $_SERVER['DOCUMENT_ROOT'].'/functions.php';?>
+<?php include $_SERVER['DOCUMENT_ROOT'].'/functions.php';
+//get json data from file
+$jsonData = file_get_contents($_SERVER['DOCUMENT_ROOT'].'/data.json');
+//convert json data to php array
+$existingData = json_decode($jsonData,TRUE);
+
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -19,13 +25,13 @@
 <?php echo $mainMenu;?>
         </nav>
         <!-- Page content-->
-        <div class="container">
-            <div class="text-center mt-5">
-                <h1>A Bootstrap 5 Starter Template</h1>
-                <p class="lead">A complete project boilerplate built with Bootstrap</p>
-                <p>Bootstrap v5.1.3</p>
+          <div class="row justify-content-center mt-2">
+            <div class="card" style="width: 80%;">
+              <table>
+                
+              </table>
             </div>
-        </div>
+          </div>
         <!-- Bootstrap core JS-->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
         <!-- Core theme JS-->

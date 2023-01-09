@@ -14,6 +14,19 @@ if (isset($_POST["first-name"])) {
   // echo "Relationship: " . $relationship . "<br>";
 }
 
+
+  //import json data from file
+  $jsonData = file_get_contents($_SERVER['DOCUMENT_ROOT'].'/data.json');
+  //convert json data to php array
+  $existingData = json_decode($jsonData,TRUE);
+  
+  $largest_uid = 0;
+  foreach ($existingData as $item) {
+      if (isset($item['uid']) && $item['uid'] > $largest_uid) {
+          $largest_uid = $item['uid'];
+      }
+  }
+
    // do if passed
     $newFormData = array(
       "date"=> date("m/d/Y"), 
@@ -21,25 +34,16 @@ if (isset($_POST["first-name"])) {
       "lName"=> $lastName,
       "email"=> $email,
       "phone"=> $phone,
-      "relationship"=> $relationship
+      "relationship"=> $relationship,
+      "uid"=> $largest_uid+1
     );
 
-
-
-  //import json data from file
-  $jsonData = file_get_contents($_SERVER['DOCUMENT_ROOT'].'/data.json');
-  //convert json data to php array
-  $existingData = json_decode($jsonData,TRUE);
   // add new form data to existing array.
   array_push($existingData, $newFormData);
   //turn php array back into JSON data
   $jsonData = json_encode($existingData);
-
+  //send data to data.json
   file_put_contents($_SERVER['DOCUMENT_ROOT'].'/data.json', $jsonData);
-   
-  // header('Location: /contactMe.php');
 
-
-
-  header('Location: /form.php');
+  header('Location: /index.php');
 ?>

@@ -16,16 +16,61 @@
     <body>
         <!-- Responsive navbar-->
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-<?php echo $mainMenu;?>
+          <?php echo $mainMenu;?>
         </nav>
         <!-- Page content-->
-        <div class="container">
-            <div class="text-center mt-5">
-                <h1>A Bootstrap 5 Starter Template</h1>
-                <p class="lead">A complete project boilerplate built with Bootstrap</p>
-                <p>Bootstrap v5.1.3</p>
-            </div>
-        </div>
+                  <div class="row justify-content-center mt-2"> 
+                    <div class="card" style="width: 80%; background-color: #D3D3D3;">
+                      <div class="card-body">
+                        <form action ="/redirect.php" method="post">
+                          <div class="row"> 
+                            <div class="col-4 mt-2"> 
+                              <label for="first-name">First Name:</label> <br>
+                              <input type="text" id="first-name" name="first-name"><br>
+                            </div>  
+                            <div class="col-4 mt-2"> 
+                              <label for="last-name">Last Name:</label> <br>
+                              <input type="text" id="last-name" name="last-name"><br>
+                            </div>  
+                            <div class="col-4 mt-2"> 
+                              <label for="email">Email:</label><br>
+                              <input type="email" id="email" name="email"><br>
+                            </div> 
+
+                            <div class="col-4 mt-2"> 
+                              <label for="phone">Phone:</label><br>
+                              <input type="tel" id="phone" name="phone"><br>
+                            </div>  
+                            <div class="col-4 mt-2"> 
+                              <label for="relationship">Relationship:</label><br>
+                              <select id="relationship" name="relationship">
+                                <option value="friend">Friend</option>
+                                <option value="family">Family</option>
+                                <option value="coworker">Coworker</option>
+                              </select><br>
+                            </div>       
+
+                            <div class="col-4 mt-2"> 
+                              <br>
+                              <input type="submit" value="Submit"><br>
+                            </div>   
+                            
+                          </div>
+
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+
+
+                  <div class="row justify-content-center mt-2">
+                    <div class="card" style="width: 80%;">
+                      some contacts
+                    </div>
+                  </div>
+
+
+      
         <!-- Bootstrap core JS-->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
         <!-- Core theme JS-->
