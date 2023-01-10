@@ -2,7 +2,7 @@
 $data = file_get_contents($_SERVER['DOCUMENT_ROOT']."/data.json");      
   $data =  json_decode($data, TRUE);
 
-  $uid = 101;
+  $uid = 201;
   foreach ($data as &$item) {
       $item['uid'] = $uid;
       $uid++;

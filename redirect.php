@@ -6,12 +6,6 @@ if (isset($_POST["first-name"])) {
   $email = $_POST["email"];
   $phone = $_POST["phone"];
   $relationship = $_POST["relationship"];
-
-  // echo "First Name: " . $firstName . "<br>";
-  // echo "Last Name: " . $lastName . "<br>";
-  // echo "Email: " . $email . "<br>";
-  // echo "Phone: " . $phone . "<br>";
-  // echo "Relationship: " . $relationship . "<br>";
 }
 
 
